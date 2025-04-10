@@ -18,10 +18,31 @@
   padding: 0 1rem;
 }
 
+.loading-text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  backdrop-filter: blur(0.5px); /* Blurs the background */
+  background-color: rgba(255, 255, 255, 0.6); /* Semi-transparent layer */
+
+  font-weight: bold;
+  font-size: 1.5rem;
+  z-index: 10;
+}
+
 .filters {
   display: flex;
   gap: 1rem;
   margin-bottom: 2rem;
+  position: relative;
+  z-index: 20; /* Stay above loading blur */
 }
 
 input, select {
